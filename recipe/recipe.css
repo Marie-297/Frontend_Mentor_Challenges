@@ -12,14 +12,10 @@ body {
   border-radius: 20px;
 }
 .first-div {
-  width: 100%;
   margin-bottom: 20px;
   img {
     display: block;
-    height: 230px;
-    width: 40vw;
-    margin: 0 auto;
-    border-radius: 10px;
+    max-width: 100%;
   }
 }
 p {
@@ -85,10 +81,8 @@ table {
     padding: 0px;
   }
   .first-div {
-    width: 100%;
     padding: none;
     img {
-      width: 90vw;
       margin: 0;
     }
   }
