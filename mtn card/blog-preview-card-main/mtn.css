@@ -1,0 +1,56 @@
+.outercard {
+  background-color: hsl(47, 88%, 63%);
+}
+.maincard {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 120vh;
+  background-color: hsl(47, 88%, 63%);
+}
+.card {
+  padding: 20px;
+  border: 2px solid black;
+  box-shadow: 5px 5px;
+  border-radius: 10px;
+}
+.card-titleA {
+  background-color: hsl(47, 88%, 63%);
+  font-weight: 600;
+}
+.card-textB {
+  color: gray;
+  font-size: 14px;
+}
+.card-textA {
+  font-weight: 400;
+  margin-top: 10px;
+  font-size: 14px;
+}
+.two {
+  margin-top: 0;
+}
+.card-body {
+  margin-bottom: 5px;
+}
+h5 {
+  font-weight: 900;
+
+}
+h5:hover {
+  color: hsl(47, 88%, 63%);
+  cursor: pointer;
+}
+.flexdiv {
+  display: flex;
+  column-gap: 20px;
+  align-items: center !important;
+  p {
+    font-weight: 900;
+  }
+  img {
+    width: 15%;
+    height: 15%;
+  }
+
+}
