@@ -1,0 +1,147 @@
+body {
+  background-color: hsl(212, 45%, 89%);
+  font-family: Outfit;
+}
+
+.main-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+.sub-body {
+  width: 20%;
+  height: 70%;
+  background-color: white;
+  border-radius: 10px;
+  padding: 1%;
+  img {
+    border-radius: 10px;
+  }
+  h6 {
+    font-weight: 700;
+    padding-left: 3%;
+    padding-right: 3%;
+    margin-top: 10%;
+    word-spacing: 4px;
+  }
+  p {
+    font-size: 12px;
+    padding-left: 3%;
+    padding-right: 3%;
+    margin-top: 10%;
+    text-align: center;
+    word-spacing: 2px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .main-body {
+    height: 90vh;
+  }
+  
+  .sub-body {
+    height: 85%;
+    width: 90%;
+    padding: 7%;
+    h6 {
+      padding-left: 10%;
+      padding-right: 10%;
+      font-weight: 20px;
+    }
+    p {
+      padding-left: 10%;
+      padding-right: 10%;
+    }
+  }
+ 
+}
+@media (min-width: 401px) and (max-width: 500px) {
+  .main-body {
+    height: 90vh;
+  }
+  
+  .sub-body {
+    height: 85%;
+    width: 80%;
+    padding: 7%;
+    img {
+      max-height: 30%;
+    }
+    h6 {
+      padding-left: 7%;
+      padding-right: 7%;
+      font-weight: 30px;
+    }
+    p {
+      padding-left: 7%;
+      padding-right: 7%;
+    }
+  }
+ 
+}
+@media (min-width: 501px) and (max-width: 750px) {
+  .main-body {
+    height: 100vh;
+  }
+  
+  .sub-body {
+    height: 85%;
+    width: 60%;
+    padding: 7%;
+    h6 {
+      padding-left: 7%;
+      padding-right: 7%;
+      font-weight: 30px;
+    }
+    p {
+      padding-left: 7%;
+      padding-right: 7%;
+    }
+  }
+ 
+}
+@media (min-width: 751px) and (max-width: 1000px) {
+  .main-body {
+    height: 100vh;
+  }
+  
+  .sub-body {
+    height: 80%;
+    width: 40%;
+    padding: 4%;
+    h6 {
+      padding-left: 7%;
+      padding-right: 7%;
+      font-weight: 30px;
+    }
+    p {
+      padding-left: 7%;
+      padding-right: 7%;
+    }
+  }
+ 
+}
+@media (min-width: 1001px) and (max-width: 1200px) {
+  .main-body {
+    height: 100vh;
+  }
+  
+  .sub-body {
+    height: 80%;
+    width: 30%;
+    padding: 2%;
+    h6 {
+      padding-left: 7%;
+      padding-right: 7%;
+      font-weight: 30px;
+    }
+    p {
+      padding-left: 7%;
+      padding-right: 7%;
+    }
+  }
+ 
+}
