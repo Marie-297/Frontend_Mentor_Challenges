@@ -1,0 +1,129 @@
+html {
+  background-color: hsl(216, 12%, 8%);
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  font-family: Overpass;
+}
+
+.main-body, .main-body2 {
+  width: 23%;
+  height: 45%;
+  background-color: hsl(213, 19%, 18%);
+  padding: 30px;
+  border-radius: 30px;
+}
+.main-body2 {
+  text-align: center;
+}
+.star-icon {
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(212, 16%, 21%);
+  img {
+    height: 15px;
+    width: 15px;
+  }
+}
+h2 {
+  color: hsl(0, 0%, 100%);
+  font-weight: 700;
+}
+.details-p {
+  color:  hsl(217, 12%, 63%);
+  font-size: 13px;
+}
+.button-div {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+.num-btn {
+  color: hsl(216, 12%, 54%);
+  background-color: hsl(212, 16%, 21%);
+  border-radius: 50%;
+  border: none;
+  height: 45px;
+  width: 45px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.num-btn:hover {
+  background-color: hsl(25, 97%, 53%);
+  color: white;
+  font-weight: 700;
+}
+.num-btn:focus {
+  background-color: hsl(217, 12%, 63%);
+  color: white;
+  font-weight: 700;
+} 
+.rating {
+  margin-top: 15px;
+}
+.hidden {
+  display: none;
+}
+.rating-p {
+  padding-top: 10px;
+  height: 25px;
+  background-color: hsl(212, 16%, 21%);
+  color: hsl(25, 97%, 53%);
+  border: none;
+  border-radius: 20px;
+  font-size: 12px;
+  cursor: pointer;
+}
+.submit-btn {
+  width: 100%;
+  background-color: hsl(25, 97%, 53%);
+  border: none;
+  height: 35px;
+  border-radius: 20px;
+  color: hsl(0, 0%, 100%);
+  letter-spacing: 3px;
+  font-size: 12px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.submit-btn:hover {
+  background-color: hsl(0, 0%, 100%);
+  color: hsl(25, 97%, 53%);
+  font-weight: 700;
+}
+
+@media screen and (max-width: 500px) {
+  .main-body, .main-body2 {
+    height: 50%;
+    width: 75%;
+  }
+}
+
+@media screen and (max-width: 600px) and (min-width: 501px) {
+  .main-body, .main-body2 {
+    height: 45%;
+    width: 60%;
+  }
+}
+@media screen and (max-width: 800px) and (min-width: 601px) {
+  .main-body, .main-body2 {
+    height: 50%;
+    width: 40%;
+  }
+}
+
+@media screen and (max-width: 1140px) and (min-width: 801px) {
+  .main-body, .main-body2 {
+    height: 45%;
+    width: 30%;
+  }
+}
