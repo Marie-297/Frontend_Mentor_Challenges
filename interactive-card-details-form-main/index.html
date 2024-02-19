@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="stylesheet" href="Atm.css">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Interactive card details form</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+ 
+  <link rel="stylesheet" href="Atm.css"></head>
+<body>
+  <div class="main-container">
+    <div class="left-section">
+      <div class="frontcard">
+        <img src="images/bg-card-front.png" class="front-card" alt="">
+        <div class="abs-position">
+          <img class="cardlogo" src="images/card-logo.svg" alt="">
+          <div class="atmnum"><h1 class="card-number">0000 0000 0000 0000</h1></div>
+          <div class="carddetails">
+            <p class="card-name">Jane Appleseed</p>
+            <p><span class="expiry-date-mm">00</span>/ <span class="expiry-date-yy">00</span></p>
+          </div>
+        </div>
+      </div>
+      <div class="backcard">
+        <img src="images/bg-card-back.png" class="back-card" alt="">
+        <p class="cvc-output">000</p>
+      </div>
+    </div>
+  
+    <div class="right-section">
+      <form id="myform">
+        <label for="card-name">CARDHOLDER NAME</label>
+        <input type="text" id="cardinputname" name="card-name" placeholder="Jane Appleseed" oninput="nameInput()";>
+        <p class="nameerror"></p>
+        
+  
+        <label for="card-num">CARD NUMBER</label>
+        <input type="text" id="cardnum" name="card-num" maxlength="19" min-length="19" placeholder="0000 0000 0000 0000" oninput="numInput();" required>
+        <p class="numerror"></p>
+        
+  
+        <div class="date-flex">
+          <div>
+            <label for="expiry-date">Exp. Date (MM/YY)</label><br>
+            <div class="inputflex">
+              <input type="text" maxlength="2" name="exp-date" id="expiry-date" placeholder="MM" class="inputmm" oninput="inputMM();">
+              <input type="text" maxlength="2" name="exp-date" id="expiry-date" placeholder="YY" class="inputyy" oninput="inputYY();">
+            </div>
+            <p class="dateerror"></p>
+          </div>
+          <div>
+            <label for="cvc">CVC</label><br>
+            <input type="text" maxlength="3" class="cvc-input" name="cvc" id="cvc" placeholder="e.g. 123" oninput="inputCVC();">
+            <p class="cvcerror"></p>
+           
+          </div>
+        </div>
+  
+        <button type="button" class="btnsubmit btn" onclick="submitButton();">Confirm</button>
+      </form>
+    </div>
+
+    <div class="thank-you hidden">
+      <img class="thankyou-img" src="images/icon-complete.svg" alt="">
+      <h2>Thank you!</h2>
+      <p> We've added your card details</p>
+      <button type="button" class="btn" onclick="continueBtn();">Continue</button>
+    </div>
+  </div>
+
+  <!-- Completed state start -->
+
+  
+ 
+  
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Mariama Seidu</a>.
+  </div>
+
+  <script src="Atm.js"></script>
+</body>
+</html>
