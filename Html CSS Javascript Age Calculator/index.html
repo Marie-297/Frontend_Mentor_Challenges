@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="index.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,800&display=swap" rel="stylesheet"> 
+  <title>Age Calculator App</title>
+</head>
+<body>
+  <form>
+    <div class="age-calculator">
+      <div class="date-row">
+        <div class="label-input daylabelinput">
+          <label for="day" class="labelday">DAY</label>
+          <input type="text" id="day" class="day" placeholder="DD" maxlength="2" minlength="2">
+          <small class="dayerror error hidden">This field is required</small>
+          <small class="validday error hidden">Must be a valid day</small>
+        </div>
+        <div class="label-input">
+          <label for="month" class="labelmonth">MONTH</label>
+          <input type="text" id="month" placeholder="MM" maxlength="2" minlength="2">
+          <small class="montherror error hidden">This field is required</small>
+          <small class="validmon error hidden">Must be a valid month</small>
+        </div>
+        <div class="label-input">
+          <label for="year" class="labelyear">YEAR</label>
+          <input type="text" id="year" placeholder="YYYY" maxlength="4" minlength="4">
+          <small class="yearerror error hidden">This field is required</small>
+          <small class="validyr error hidden">Must be in the past</small>
+        </div>
+      </div>
+      <div id="btn">
+        <hr>
+        <button type="button" class="btn" onclick="
+          calculateAge();
+        "><img src="assets/images/icon-arrow.svg" alt="arrow-icon"></button>
+      </div>
+    </div>
+  </form>
+
+  <div class="age-output">
+    <div>
+      <h1><span class="years dash">--</span>years</h1>
+    </div>
+
+    <div>
+      <h1><span class="months dash">--</span>months</h1>
+    </div>
+
+    <div>
+      <h1><span class="days dash">--</span>days</h1>
+    </div>
+  </div>
+
+  <script src="index.js"></script>
+</body>
+</html>
