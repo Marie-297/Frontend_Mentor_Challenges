@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Calculator app</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body class="body">
+  <div class="container">
+    <div class="header">
+      <h4>Calc</h4>
+      <div class="toggler">
+        <div class="toggle-num">
+          <button class="num1" onclick="toggleOne();">1</button>
+          <button class="num2" onclick="toggleTwo();">2</button>
+          <button class="num3" onclick="toggleThree();">3</button>
+        </div>
+        <div class="themediv">
+          <p class="theme">THEME</p>
+          <div class="toggle">
+            <div class="theme1"></div>
+            <div class="theme2 hide"></div>
+            <div class="theme3 hide"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="screen">
+      <input type="text" readonly id="view" name="view" placeholder="0">
+    </div>
+    <div class="keys">
+      <div class="firstline">
+        <button class="keypad num" onclick="select(7);">7</button>
+        <button class="keypad num" onclick="select(8);">8</button>
+        <button class="keypad num" onclick="select(9);">9</button>
+        <button class="keypad del" onclick="del();">DEL</button>
+      </div>
+      <div class="firstline">
+        <button class="keypad num" onclick="select(4);">4</button>
+        <button class="keypad num" onclick="select(5);">5</button>
+        <button class="keypad num" onclick="select(6);">6</button>
+        <button class="keypad plus" onclick="select('+');">+</button>
+      </div>
+      <div class="firstline">
+        <button class="keypad num" onclick="select(1);">1</button>
+        <button class="keypad num" onclick="select(2);">2</button>
+        <button class="keypad num" onclick="select(3);">3</button>
+        <button class="keypad minus" onclick="select('-');">-</button>
+      </div>
+      <div class="firstline">
+        <button class="keypad num" onclick="select('.');">.</button>
+        <button class="keypad num" onclick="select(0);">0</button>
+        <button class="keypad num" onclick="select('/');">/</button>
+        <button class="keypad minus" onclick="select('*');">&times;</button>
+      </div>
+      <div class="firstline">
+        <button class="resetkey" onclick="reset();">RESET</button>
+        <button class="equals" onclick="calc();">=</button>
+      </div>
+    </div>
+    </div>
+
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Mariama Seidu</a>.
+  </div>
+
+  <script src="index.js"></script>
+</body>
+</html>
