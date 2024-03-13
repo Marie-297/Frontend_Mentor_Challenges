@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="tip.css">
+  <title>Document</title>
+</head>
+<body>
+  <div class="logo">
+    <img src="images/logo.svg" alt="logo">
+  </div>
+  <div class="main-section">
+    <div class="left-section">
+      <div class="form">
+        <label for="" name="bill">Bill</label>
+        <input type="text" inputmode="numeric" id="bill-input" class="bill-input input" placeholder="0"/>
+        <label for="">Select Tip %</label>
+        <div class="tip">
+          <div class="tips tip5" onclick="
+            handleClick(5);
+            ">5%</div>
+          <div class="tips tip10" onclick="
+          handleClick(10)">10%</div>
+          <div class="tips tip15" onclick="
+          handleClick(15)">15%</div>
+          <div class="tips tip25" onclick="
+          handleClick(25)">25%</div>
+          <div class="tips tip50" onclick="
+          handleClick(50)">50%</div>
+          <input type="text" id="custom-tip" class="tip tips" placeholder="Custom" onclick="handleClick(value)">
+        </div>
+        <div class="people-label">
+          <label for="">Number of People</label>
+          <label for="" class="small error">Can't be zero</label>
+        </div>
+        <input type="text" inputmode="numeric" class="people-input input" placeholder="0">
+      </div>
+    </div>
+
+    <div class="right-section">
+      <div class="tip-amt">
+        <div class="left-tip-text">
+          <p class="firstp">Tip Amount</p>
+          <p class="secondp">/ person</p>
+        </div>
+        <div class="amount">&dollar;<div class="tipamount">0.00</div></div>
+      </div>
+
+      <div class="total-amt">
+        <div class="left-tip-text">
+          <p class="firstp">Total</p>
+          <p class="secondp">/ person</p>
+        </div>
+        <div class="amount">&dollar;<div class="totalamount">0.00</div></div>
+      </div>
+
+      <div class="reset" onclick="reset();">
+        RESET
+      </div>
+    </div>
+  </div>
+  
+
+
+  <script type="text/javascript" src="tip.js"></script>
+</body>
+</html>
