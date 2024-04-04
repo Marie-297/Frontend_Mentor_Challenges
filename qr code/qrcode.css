@@ -13,22 +13,24 @@ body {
 
 .sub-body {
   width: 20%;
-  height: 70%;
+  height: 65%;
   background-color: white;
   border-radius: 10px;
   padding: 1%;
   img {
     border-radius: 10px;
   }
-  h6 {
-    font-weight: 700;
+  h5 {
+    font-weight: 900 !important;
+    text-align: center;
     padding-left: 3%;
     padding-right: 3%;
-    margin-top: 10%;
+    margin-top: 7%;
     word-spacing: 4px;
+    color: hsl(218, 44%, 22%);
   }
   p {
-    font-size: 12px;
+    font-size: 15px;
     padding-left: 3%;
     padding-right: 3%;
     margin-top: 10%;
@@ -43,7 +45,7 @@ body {
   }
   
   .sub-body {
-    height: 85%;
+    height: 80%;
     width: 90%;
     padding: 7%;
     h6 {
@@ -52,6 +54,7 @@ body {
       font-weight: 20px;
     }
     p {
+      font-size: 13px;
       padding-left: 10%;
       padding-right: 10%;
     }
