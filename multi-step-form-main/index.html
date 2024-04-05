@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link href="https://fonts.googleapis.com/css2?family=Fugaz+One&family=Nunito&family=Roboto:ital,wght@0,400;0,700;1,300&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+  
+  <title>Frontend Mentor | Multi-step form</title>
+  <link rel="stylesheet" href="add-ons.css">
+</head>
+<body>
+
+  <div class="mainrow">
+    <!-- Sidebar start -->
+  
+    <div class="sidebar">
+      <div class="step">
+        <div>
+          <div class="round-num active num1">1</div>
+        </div>
+        <div class="step-detail">
+          <div class="p-info"> Step 1</div>
+          <div class="num-detail">Your info</div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div>
+          <div class="round-num num2">2</div>
+        </div>
+        <div class="step-detail">
+          <div class="p-info"> Step 2</div>
+          <div class="num-detail"> Select plan</div>
+        </div>
+      </div>
+      
+
+      <div class="step">
+        <div>
+          <div class="round-num num3">3</div>
+        </div>
+        <div class="step-detail">
+          <div class="p-info"> Step 3</div>
+          <div class="num-detail">Add-ons</div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div>
+          <div class="round-num num4">4</div>
+        </div>
+        <div class="step-detail">
+          <div class="p-info"> Step 4</div>
+          <div class="num-detail">Summary</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sidebar end -->
+
+    <!-- Step 1 start -->
+
+    <div class="step1">
+      <div>
+      <h1> Personal info</h1>
+        <p>Please provide your name, email address, and phone number.</p>
+      </div>
+      <form class="secondrow">
+        <div class="formdiv">
+          <div class="label-flex">
+            <label for="name" class="form-label">Name</label>
+            <p class="name-error err"></p>
+          </div>
+          <input type="text" class="form-control" id="name" aria-describedby="nameHelp" placeholder="e.g. Stephen King">
+        </div>
+        <div class="formdiv">
+          <div class="label-flex">
+            <label for="Email" class="form-label label">Email Address</label>
+            <p class="mail-error err"></p>
+          </div>
+          <input type="email" class="form-control" id="Email1" aria-describedby="emailHelp" placeholder="e.g. stephenking@lorem.com">
+        </div>
+        <div class="formdiv">
+          <div class="label-flex">
+            <label for="phone" class="form-label label">Phone number</label>
+            <p class="number-error err"></p>
+          </div>
+          <input type="tel" class="form-control" id="phone" aria-describedby="emailHelp" placeholder="e.g. +1 234 567 890">
+        </div>
+        <div class="button">
+         <button class="btn" type="button" onclick="endFirstStep();">Next Step</button>
+        </div>
+      </form>
+    </div>
+
+    <!-- Step 1 end -->
+    <!-- Step 2 start -->
+
+  <div class="step2 hidden">
+    <div>
+      <h1>Select your plan</h1>
+      <p>You have the option of monthly or yearly billing.</p>
+    </div>
+
+    <div class="card1">
+      <div class="card arcade1">
+        <img src="assets/images/icon-arcade.svg" alt="">
+        <h4 class="select-plan">Arcade</h4>
+        <p class="small">$9/mo</p>
+      </div>
+  
+      <div class="card arcade2">
+        <img src="assets/images/icon-advanced.svg" alt="">
+        <h4 class="select-plan">Advanced</h4>
+        <p class="small">$12/mo</p>
+      </div>
+  
+      <div class="card arcade3">
+        <img src="assets/images/icon-pro.svg" alt="">
+        <h4 class="select-plan">Pro</h4>
+        <p class="small"> $15/mo</p>
+      </div>
+    </div>
+    <div class="card1A hidden">
+      <div class="card arcade4">
+        <img src="assets/images/icon-arcade.svg" alt="">
+        <h4 class="select-plan">Arcade</h4>
+        <p class="small">$90/yr</p>
+        <small class="free">2months free</small>
+      </div>
+  
+      <div class="card arcade5">
+        <img src="assets/images/icon-advanced.svg" alt="">
+        <h4 class="select-plan">Advanced</h4>
+        <p class="small">$120/mo</p>
+        <small class="free">2months free</small>
+      </div>
+  
+      <div class="card arcade6">
+        <img src="assets/images/icon-pro.svg" alt="">
+        <h4 class="select-plan">Pro</h4>
+        <p class="small"> $150/mo</p>
+        <small class="free">2months free</small>
+      </div>
+    </div>
+    <div class="switchs">
+      <p class="mth">Monthly</p>
+      <label class="switch" onchange="checkMe();">
+        <input type="checkbox" id="check" onchange="checkMe();">
+        <span class="slider round"></span>
+      </label>
+      <p class="yr">Yearly</p>
+    </div>
+    <div class="btn-div">
+      <button class="btn-link" onclick="stageOne();" type="button">Go Back</button>
+      <button class="btn" id="firstbtn" type="button" onclick="stageThree();">Next Step</button>
+      <button class="btn hidden" id="secondbtn" type="button" onclick="stageThreeYr();">Next Step</button>
+    </div>
+  </div>
+
+  <!-- Step 2 end -->
+
+  <!-- Step 3 start -->
+  <div class="step3 hidden">
+    <div>
+      <h1> Pick add-ons</h1>
+      <p> Add-ons help enhance your gaming experience.</p>
+    </div>
+
+    <div class="thirdstagecards">
+      <div class="card2">
+        <div class="leftcard">
+          <input type="checkbox" id="tick">
+          <div>
+          <h4>Online service</h4>
+          <p class="small">Access to multiplayer games</p>
+          </div>
+        </div>
+        <p class="price">+$1/mo</p>
+      </div>
+  
+      <div class="card2">
+        <div class="leftcard">
+          <input type="checkbox" id="tick">
+          <div>
+            <h4> Larger storage</h4>
+            <p class="small">Extra 1TB of cloud save</p>
+          </div>
+        </div>
+        <p class="price">+$2/mo</p>
+      </div>
+  
+      <div class="card2">
+        <div class="leftcard">
+          <input type="checkbox" id="tick">
+          <div>
+            <h4>Customizable Profile</h4>
+            <p class="small">Custom theme on your profile</p>
+          </div>
+        </div>
+        <p class="price">+$2/mo</p>
+      </div>
+    </div>
+
+    <div class="thirdstagecardsyear hidden">
+      <div class="card2">
+        <div class="leftcard">
+          <input type="checkbox" id="tick">
+          <div>
+          <h4>Online service</h4>
+          <p class="small">Access to multiplayer games</p>
+          </div>
+        </div>
+        <p class="price">+$10/yr</p>
+      </div>
+  
+      <div class="card2">
+        <div class="leftcard">
+          <input type="checkbox" id="tick">
+          <div>
+            <h4> Larger storage</h4>
+            <p class="small">Extra 1TB of cloud save</p>
+          </div>
+        </div>
+        <p class="price">+$20/yr</p>
+      </div>
+  
+      <div class="card2">
+        <div class="leftcard">
+          <input type="checkbox" id="tick">
+          <div>
+            <h4>Customizable Profile</h4>
+            <p class="small">Custom theme on your profile</p>
+          </div>
+        </div>
+        <p class="price">+$20/yr</p>
+      </div>
+    </div>
+
+    <div class="btn-div">
+      <button class="btn-link" type="button" onclick="stageTwo();">Go Back</button>
+      <button class="btn" id="stagefourfirstbtn" type="button" onclick="stageFourUpdate();">Next Step</button>
+      <button class="btn hidden" type="button" id="stagefoursecondbtn" onclick="stageFourUpdateYr();">Next Step</button>
+    </div>
+  </div>
+
+  <!-- Step 3 end -->
+
+  <!-- Step 4 start -->
+
+  <div class="step4 hidden">
+    <div>
+      <h1> Finishing up</h1>
+      <p>Double-check everything looks OK before confirming.</p>
+    </div>
+
+     <!-- Dynamically add subscription and add-on selections here -->
+    <div class="summary-check"></div>
+
+    
+
+    <div class="btn-div">
+      <button class="btn-link" id="goback3mth" type="button" onclick="stageThree();">Go Back</button>
+      <button class="btn-link hidden" id="goback3yr" type="button" onclick="stageThreeYr();">Go Back</button>
+      <button class="btn" type="button" onclick="stageFive();">Confirm</button>
+    </div>
+  </div>
+
+  <!-- Step 4 end -->
+
+  <!-- Step 5 start -->
+  <div class="step5 hidden">
+    <img src="assets/images/icon-thank-you.svg" alt="">
+    <h2>Thank you!</h2>
+    <p>Thanks for confirming your subscription! We hope you   have fun 
+      using our platform. If you ever need support, please feel free 
+      to email us at support@loremgaming.com.
+    </p>
+  </div>
+  
+  <!-- Step 5 end -->
+  </div>
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Mariama Seidu</a>.
+  </div>
+
+  <script src="index.js"></script>
+</body>
+</html>
