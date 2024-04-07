@@ -1,4 +1,4 @@
-html {
+body {
   background-color: hsl(30, 54%, 90%);
   max-width: 1440px;
   min-height: 100vh;
@@ -6,7 +6,7 @@ html {
   justify-content: center;
   align-items: center;
 }
-body {
+.container {
   background-color: white;
   width: 50%;
   padding: 2%;
