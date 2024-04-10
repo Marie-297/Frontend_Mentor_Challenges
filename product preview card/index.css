@@ -9,8 +9,8 @@ body {
 }
 .main-section {
   display: flex;
-  height: 65vh;
-  width: 40vw;
+  height: 70vh;
+  width: 45vw;
   border: 1px solid white;
   border-radius: 20px;
   .leftcol {
