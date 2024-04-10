@@ -9,7 +9,7 @@ body {
 }
 .main-section {
   display: flex;
-  height: 70vh;
+  height: 65vh;
   width: 45vw;
   border: 1px solid white;
   border-radius: 20px;
