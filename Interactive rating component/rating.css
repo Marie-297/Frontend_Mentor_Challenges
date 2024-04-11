@@ -6,16 +6,16 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
   width: 100vw;
   font-family: Overpass;
 }
 
 .main-body, .main-body2 {
-  width: 23%;
-  height: 45%;
+  width: 22%;
+  height: 42%;
   background-color: hsl(213, 19%, 18%);
-  padding: 30px;
+  padding: 25px;
   border-radius: 30px;
 }
 .main-body2 {
@@ -34,13 +34,13 @@ body {
     width: 15px;
   }
 }
-h2 {
+h1 {
   color: hsl(0, 0%, 100%);
   font-weight: 700;
 }
 .details-p {
   color:  hsl(217, 12%, 63%);
-  font-size: 13px;
+  font-size: 15px;
 }
 .button-div {
   display: flex;
@@ -61,6 +61,8 @@ h2 {
   background-color: hsl(25, 97%, 53%);
   color: white;
   font-weight: 700;
+  transition: background-color 0.3s;
+  transition: color 0.3s;
 }
 .num-btn:focus {
   background-color: hsl(217, 12%, 63%);
@@ -99,6 +101,8 @@ h2 {
   background-color: hsl(0, 0%, 100%);
   color: hsl(25, 97%, 53%);
   font-weight: 700;
+  transition: background-color 0.8s;
+  transition: color 0.8s;
 }
 
 @media screen and (max-width: 500px) {
