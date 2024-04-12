@@ -4,6 +4,8 @@ html {
   background-repeat: no-repeat;
 }
 body {
+  width: 100vw;
+  min-height: 100vh;
   p {
     color: gray;
   }
