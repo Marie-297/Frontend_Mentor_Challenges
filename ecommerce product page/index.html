@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="index.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  
+  <title>Frontend Mentor | E-commerce product page</title>
+ 
+</head>
+<body>
+  <div class="container">
+    <header>
+      <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+          <a class="navbarbrand" href="#"><img src="images/logo.svg" alt=""></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>      
+          <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas-header">
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>      
+            <div class="offcanvas-body">
+              <div class="navbar-nav justify-content-end">
+                <a class="nav-link active" id="active" aria-current="page" href="#">Collections</a>
+                <a class="nav-link" href="#">Men</a>
+                <a class="nav-link" href="#">Women</a>
+                <a class="nav-link" href="#">About</a>
+                <a class="nav-link" href="#">Contact</a>
+              </div>
+            </div>
+          </div>
+          <div class="right-header me-2">
+            <img src="images/icon-cart.svg" alt="cart" class="cart">
+            <div class="itemnumber hidden">0</div>
+            <img src="images/image-avatar.png" alt="" class="avatar" >
+          </div>
+        </div>
+      </nav>
+    </header>
+    <div class="carts hidden">
+      <div class="cart-header">
+        <h5>Cart</h5>
+        <hr>
+      </div>
+      <div class="cart-container">Your Cart is Empty</div>
+    </div> 
+
+    <div class="sub-container">
+      <div class="left-section">
+        <div class="selected-image">
+          <img src="images/image-product-1.jpg" alt="" class="select-img">
+          <div class="hidden nextbtn">
+            <img src="images/icon-next.svg" alt="" class="nexticon">
+          </div>
+          <div class="hidden previousbtn">
+            <img src="images/icon-previous.svg" alt="" class="previousicon">
+          </div>
+        </div>
+        <div class="pick-image">
+          <img src="images/image-product-1-thumbnail.jpg" alt="" class="thumbnail selected firstthumbnail">
+          <img src="images/image-product-2-thumbnail.jpg" alt="" class="thumbnail secondthumbnail">
+          <img src="images/image-product-3-thumbnail.jpg" alt="" class="thumbnail thirdthumbnail">
+          <img src="images/image-product-4-thumbnail.jpg" alt="" class="thumbnail forththumbnail">
+        </div>
+      </div>
+  
+      <div class="right-section">
+        <h6>SNEAKER COMPANY</h6>
+        <h1>Fall Limited Edition Sneakers</h1>
+        <p>These low-profile sneakers are your perfect casual wear companion. Featuring a 
+          durable rubber outer sole, they’ll withstand everything the weather can offer.</p>
+          <div class="pricelist">
+            <div class="pricing">
+              <p class="currentprice">$125.00</p> <small class="discount">50%</small></p>
+            </div>
+            <p class="previousprice">$250.00</p>
+          </div>
+          <div class="btns">
+            <div class="togglebtn">
+              <button class="minusbtn smallbtn" type="button" onclick="removeQuantity();">-</button>
+              <button class="zerobtn smallbtn" type="button">0</button>
+              <button class="plusbtn smallbtn" type="button" onclick="addQuantity();">+</button>
+            </div>
+            <button class="addbtn bigbtn" type="button" onclick="addToCart();"><img src="images/icon-cart.svg" alt="">Add to cart</button>
+          </div>
+      </div>
+    </div>
+  </div>
+  <div class="absoluteCont hidden">
+    <div class="innerCont">
+      <div class="crossimg">
+        <img src="images/icon-close.svg" alt="" class="closeimg">
+      </div>
+      <div class="selected-image"><img src="images/image-product-1.jpg" alt="" class="select-img selectimg">
+        <div class="nextdiv">
+          <img src="images/icon-next.svg" alt="" class="nexticon">
+        </div>
+        <div class="previousdiv">
+          <img src="images/icon-previous.svg" alt="" class="previousicon">
+        </div>
+      </div>
+      <div class="pick-image">
+        <img src="images/image-product-1-thumbnail.jpg" alt="" class="thumbnail selected firstthumbnail thumbnail1 imgg">
+        <img src="images/image-product-2-thumbnail.jpg" alt="" class="thumbnail selected secondthumbnail thumbnail2 imgg">
+        <img src="images/image-product-3-thumbnail.jpg" alt="" class="thumbnail selected thirdthumbnail thumbnail3 imgg">
+        <img src="images/image-product-4-thumbnail.jpg" alt="" class="thumbnail selected forththumbnail4 thumbnail4 imgg">
+      </div>
+    </div>
+  </div>
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Mariama Seidu</a>.
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <script src="index.js"></script>
+</body>
+</html>
+
+
+
