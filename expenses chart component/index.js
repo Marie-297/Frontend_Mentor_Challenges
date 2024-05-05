@@ -20,16 +20,22 @@ function drawBarChart(data) {
     // Loop through the data array and create a bar for each item
     data.forEach(item => {
         let chartItem = document.createElement('div');
+        console.log(item.amount);
         let totalAmount = 0;
         for (let i = 0; i < data.length; i++) {
           totalAmount = totalAmount + data[i].amount;
         }
         // calculate the height of the chartItem based on the item amount
-        chartItem.style.height = ((item.amount / totalAmount) * 400).toFixed(2) + '%';
+        chartItem.style.height = ((item.amount / totalAmount) * 350).toFixed(2) + '%';
         console.log(chartItem.style.height);
         chartItem.classList.add('chart-item');
-        
+        chartItem.setAttribute('title', `$${item.amount.toFixed(2)}`);
         chartContainer.appendChild(chartItem);
+        let para = document.createElement('p');
+        para.className = 'days';
+        para.innerHTML = item.day;
+        chartItem.appendChild(para);
     });
+    
 };
 
