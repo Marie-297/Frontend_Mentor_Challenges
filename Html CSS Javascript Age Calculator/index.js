@@ -55,7 +55,8 @@ function validateInput() {
     dayInput.classList.add("input-error");
     requiredError.classList.remove("hidden");
     labelDay.classList.add("labelerror")
-  } else if (dayInput.value > numberOfMonths[(monthInput.value - 1)] || dayInput.value > 31) {
+  } 
+  if (dayInput.value > numberOfMonths[(monthInput.value - 1)] || dayInput.value > 31) {
     validDay.classList.remove("hidden");
     dayInput.classList.add("input-error");
     labelDay.classList.add("labelerror")
@@ -64,20 +65,22 @@ function validateInput() {
     monthInput.classList.add("input-error");
     requiredMonthError.classList.remove("hidden");
     labelMonth.classList.add("labelerror")
-  } else if (monthInput.value > 12) {
+  }
+  if (monthInput.value > 12) {
     validMonth.classList.remove("hidden");
     monthInput.classList.add("input-error");
     labelMonth.classList.add("labelerror")
   }
+  // } else {
+  //   validMonth.classList.add("hidden");
+  //   monthInput.classList.remove("input-error");
+  //   labelMonth.classList.remove("labelerror");
+  // }
   if (yearInput.value == "") {
     yearInput.classList.add("input-error");
     requiredYearError.classList.remove("hidden");
     labelYear.classList.add("labelerror")
-  } else if (yearInput.value > todayYear) {
-    validYear.classList.remove("hidden");
-    yearInput.classList.add("input-error");
-    labelYear.classList.add("labelerror")
-  }
+  } 
   if (validateInput = true) {
     defaultValues();
   }
